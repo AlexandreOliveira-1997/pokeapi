@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel = "stylesheet" href ="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+  <title>pokeApi</title>
+</head>
+
+<body class="corpo">
+  <!--barra de navegação-->
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+  <!-- titulo pokemon-->
+  <div class="titulo">
+    <img src="assest\img\pokeApi.png" class="mx-auto d-block" width="600px" alt="Responsive image">
+  </div>
+  <!--Barra de pesquisa-->
+  <div class="container">
+    <div class="barradepesuisa">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="valordigitado" placeholder="Digite o nome ou ID do pokemon"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" onclick="pegaValorDiditado()" id="button-addon2" >Pesquisar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container p-3 mb-2 bg-info">
+    <div class="row">
+      <div class="card" style="width: 18rem; margin: 20px;">
+        <div class="icone">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart canjica" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="salvaPokemon(), desapareceCoracao()" >
+          <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill bananinha escondido" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+        </svg>
+      </div>
+        <img  id = "imagem" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" id= "imagemdopokemon" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h1 class="card-title" id="nomedopokemon">PIKACHU </h1>
+          <p class="card-text"> <h4>HABILIDADES</h4> </p>
+          <p id="habilidade"></p>
+
+          <!-- <p class="card-text" id="habilidade0"> </p>
+          <p class="card-text" id="habilidade1"> </p>
+          <p class="card-text" id="habilidade2"> </p>
+          <p class="card-text" id="habilidade3"> </p> -->
+          <p class="card-text"><h4>TIPO</h4> </p>
+          <p class="card-text" id="tipo0"> </p>
+          <p class="card-text" id="tipo1"> </p>
+          
+          <!-- <button class="btn btn-primary" onclick="salvaPokemon()" >Qual é esse pokemon??</button> -->
+        </div>
+      </div>
+      
+      <p style="margin: 20px;"> texto</p>
+    </div>
+  </div>
+  <!--Arquivo JS-->
+  <script src="script.js"></script>
+<!--Axios para importar pokeApi-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
